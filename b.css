@@ -1,0 +1,568 @@
+@import url();
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background: rgb(32, 27, 41);
+}
+#container{
+    position: relative;
+    padding: 40px;
+    border-radius: 20px;
+border: 8px solid  rgb(32, 27, 41);
+box-shadow: -5px -5px 15px rgba(255,255, 255, 0.1),
+5px 5px 15px  rgba(0,0, 0, 0.35),
+inset -5px -5px 15px rgba(255,255, 255, 0.1),
+inset 5px 5px 15px  rgba(0,0, 0, 0.35) ; ;
+overflow: hidden;
+width: 396px;
+height: 502px;
+}
+/*#container .for{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+   height: 335px;
+}*/
+#container .form{
+display: flex;
+align-items: center;
+flex-direction: column;
+gap: 25px;
+}
+#container .form.signin,
+#container.signinForm .form.signup
+{
+    display: none;
+}
+
+/* */
+#container .form.Forget,
+#container.forgetForm .form.signup
+{
+    display: none;
+}
+#container.forgetForm .form.Forget{
+    width: 396px;
+    height: 350;
+    flex-direction: column;
+    transform: translateX(-55px);
+}
+#container.forgetForm .form.Forget .kkkl{
+    width: 396px;
+    height: 375;
+    display: flex;
+align-items: center;
+flex-direction: column;
+gap: 25px;
+}
+#container.forgetForm .form.Forget{
+    display: flex;
+}
+#container .form.Forget .kkkl #inputbux #divforget span {
+    position: absolute;
+    left: 0;
+    padding: 12px 10px 12px 48px;
+    pointer-events: none;
+    font-size: 1em;
+    font-weight:300 ;
+    letter-spacing: 0.07em;
+    color: rgb(255, 0, 0);
+}
+#container .form.Forget .kkkl #inputbux #divforget #error{
+    padding: 8px 6px 8px 48px;
+    border: none;
+    width: 100%;
+    background: rgba(34, 4, 14, 0.654);
+    border: 1px solid  rgba(255,255, 255, 0.1);
+    color: rgb(52, 5, 5);
+    font-weight: 300;
+    border-radius: 25px;
+    font-size: 1em;
+    box-shadow: -5px -5px 15px rgba(252, 2, 2, 0.236),
+    5px 5px 15px  rgba(14, 1, 1, 0.555);
+    outline: none;
+}
+#container .form.Forget .kkkl #inputbux #divforget i {
+    position: absolute;
+    top: 9px;
+left: 20px;
+width: 25px;
+padding-right: 8px;
+padding: 2px 0;
+color: rgb(255, 0, 0);
+border-right: 1px solid rgb(255, 0, 0);
+transform: translateY(25px);
+transform: translateX(-9px);
+}
+#container .form.Forget .kkkl #inputbux #divforget #ss{
+    transform: translateY(-1px);
+}
+/**/
+
+#container.signinForm{
+    width: 396px;
+height: 500px;
+}
+#container.signinForm .form.signin{
+    display: flex;
+}
+#container .form h2{
+color: wheat;
+font-weight: 500;
+letter-spacing: 0.1em;
+}
+#container .form #inputbux{
+
+    position: relative;
+    width: 300px;
+}
+#container .form #inputbux input
+{
+
+padding: 12px 10px 12px 48px;
+border: none;
+width: 100%;
+background: rgb(23, 23, 23);
+border: 1px solid  rgba(255,255, 255, 0.1);
+color: aliceblue;
+font-weight: 300;
+border-radius: 25px;
+font-size: 1em;
+box-shadow: -5px -5px 15px rgba(255,255, 255, 0.1),
+5px 5px 15px  rgba(0,0, 0, 0.35);
+transition: 0.5s;
+outline: none;
+}
+#container .form #inputbux span{
+position: absolute;
+left: 0;
+padding: 12px 10px 12px 48px;
+pointer-events: none;
+font-size: 1em;
+font-weight:300 ;
+transition: 0.5s;
+letter-spacing: 0.07em;
+color: rgba(255,255, 255, 0.5);
+transform: translateY(4px);
+}
+#container .form #inputbux input:valid ~ span,
+#container .form #inputbux input:focus ~ span{
+    color: aqua;
+    border: 1px solid aqua;
+    background:#223243;
+    transform: translateX(25px) translateY(-7px);
+    font-size: 0.7em;
+    padding: 0 8px;
+    border-radius: 10px;
+    letter-spacing: 0.1em;
+
+}
+#container .form #inputbux input:valid,
+#container .form #inputbux input:focus{
+border: 1px solid aqua;
+
+}
+#container .form #inputbux i{
+position: absolute;
+top: 15px;
+left: 16px;
+width: 25px;
+padding-right: 8px;
+padding: 2px 0;
+color: aqua;
+border-right: 1px solid aqua;
+
+}
+#container .form #inputbux input[type="submit"]{
+    background: rgb(1, 255, 183);
+    color: #223243;
+    padding: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: -5px -5px 15px rgba(255,255, 255, 0.1),
+    5px 5px 15px  rgba(0,0, 0, 0.35),
+    inset -5px -5px 15px rgba(126, 247, 213, 0.364),
+    inset 5px 5px 15px  rgba(1, 3, 18, 0.431) ; ;;
+}
+#container .form p {
+    color: rgba(255,255, 255, 0.5) ;
+font-size: 0.7em;
+font-weight: 300;
+}
+#container .form p a{
+    color: rgb(255, 255, 255) ;
+    
+    font-weight: 500;
+}
+#container .form.signin #inputbux p{
+    justify-content: center;
+    align-items: center;
+}
+
+#container #aa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right,transparent,#17f3fd);
+    animation: animate_one 2s linear infinite;
+    }
+    @keyframes animate_one{
+        0%{
+            transform: translateX(-100%);
+        }
+        100%{
+            transform: translateX(100%);
+        }
+    }
+    
+    #container #bb{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3px;
+        height: 100%;
+        background: linear-gradient(to bottom,transparent,#17f3fd);
+        animation: animate_tow 2s linear infinite;
+        animation-delay: 1s;
+        }
+        @keyframes animate_tow{
+            0%{
+                transform: translateY(-100%);
+            }
+            100%{
+                transform: translateY(100%);
+            }
+        }
+        #container #cc{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to left,transparent,#17f3fd);
+            animation: animate_three 2s linear infinite;
+            }
+            @keyframes animate_three{
+                0%{
+                    transform: translateX(100%);
+                }
+                100%{
+                    transform: translateX(-100%);
+                }
+            }
+            #container #ee{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 3px;
+                height: 100%;
+                background: linear-gradient(to top,transparent,#17f3fd);
+                animation: animate_four 2s linear infinite;
+                animation-delay: 1s;
+                }
+                @keyframes animate_four{
+                    0%{
+                        transform: translateY(100%);
+                    }
+                    100%{
+                        transform: translateY(-100%);
+                    }
+                }
+
+                #container .form #inputbux #toggle i.eyelink {
+                    display: flex;
+                    color: rgb(0, 94, 255);
+                    border: none;
+                    cursor: pointer;
+                    transform: translateY(-7px);
+                     transform: translateX(250px);
+                }
+                #container .form #inputbux #toggle i.eyelink:hover {
+                    font-size: 1.2em;
+                    transform: translateY(-2px);
+                     transform: translateX(245px);
+                }
+                #container .form #inputbux #toggle i.eyeshow{
+                    display: none;
+                    color: rgb(0, 94, 255);
+                    border: none;
+                    cursor: pointer;
+                    transform: translateY(-7px);
+                     transform: translateX(250px);
+                }
+                #container .form #inputbux #toggle i.eyeshow:hover{
+                  
+                    font-size: 1.2em;
+                    transform: translateY(-2px);
+                     transform: translateX(245px);
+                }
+
+                #container .form #inputbux #togglee .eyelinkcon {
+                    display: flex;
+                    color: rgb(0, 94, 255);
+                    border: none;
+                    cursor: pointer;
+                    transform: translateY(-7px);
+                     transform: translateX(250px);
+                }
+                #container .form #inputbux #togglee .eyelinkcon:hover {
+                    font-size: 1.2em;
+                    transform: translateY(-2px);
+                     transform: translateX(245px);
+                }
+                #container .form #inputbux #togglee .eyeshowcon{
+                    display: none;
+                    color: rgb(0, 94, 255);
+                    border: none;
+                    cursor: pointer;
+                    transform: translateY(-7px);
+                     transform: translateX(250px);
+                }
+                #container .form #inputbux #togglee .eyeshowcon:hover{
+                   
+                    font-size: 1.2em;
+                    transform: translateY(-2px);
+                     transform: translateX(245px);
+                }
+               
+                #container .form #inputbux #toggle i.eyelink {
+                    display: flex;
+                    color: rgb(0, 94, 255);
+                    border: none;
+                    cursor: pointer;
+                    transform: translateY(-7px);
+                     transform: translateX(250px);
+                }
+                #container .form #inputbux #toggle i.eyelink:hover {
+                    font-size: 1.2em;
+                    transform: translateY(-2px);
+                     transform: translateX(245px);
+                }
+                #container .form #inputbux #toggle i.eyeshow{
+                    display: none;
+                    color: rgb(0, 94, 255);
+                    border: none;
+                    cursor: pointer;
+                    transform: translateY(-7px);
+                     transform: translateX(250px);
+                }
+                #container .form #inputbux #toggle i.eyeshow:hover{
+                  
+                    font-size: 1.2em;
+                    transform: translateY(-2px);
+                     transform: translateX(245px);
+                }
+
+                #container.forgetForm .form.Forget .kkkl #inputbux #togglexxx .eyelinkxxx {
+                    display: flex;
+                    color: rgb(0, 94, 255);
+                    border: none;
+                    cursor: pointer;
+                    transform: translateY(-7px);
+                     transform: translateX(250px);
+                }
+                #container.forgetForm .form.Forget .kkkl #inputbux #togglexxx .eyelinkxxx:hover {
+                    font-size: 1.2em;
+                    transform: translateY(-2px);
+                     transform: translateX(245px);
+                }
+                #container.forgetForm .form.Forget .kkkl #inputbux #togglexxx .eyeshowxxx{
+                    display: none;
+                    color: rgb(0, 94, 255);
+                    border: none;
+                    cursor: pointer;
+                    transform: translateY(-7px);
+                     transform: translateX(250px);
+                }
+                #container.forgetForm .form.Forget .kkkl #inputbux #togglexxx .eyeshowxxx:hover{
+                   
+                    font-size: 1.2em;
+                    transform: translateY(-2px);
+                     transform: translateX(245px);
+                }
+
+
+
+
+#container .form #inputbux #divspan span {
+    position: absolute;
+    left: 0;
+    padding: 12px 10px 12px 48px;
+    pointer-events: none;
+    font-size: 1em;
+    font-weight:300 ;
+    letter-spacing: 0.07em;
+    color: rgb(255, 0, 0);
+}
+#container .form #inputbux #divspan #error{
+    padding: 8px 6px 8px 48px;
+    border: none;
+    width: 100%;
+    background: rgba(34, 4, 14, 0.654);
+    border: 1px solid  rgba(255,255, 255, 0.1);
+    color: rgb(52, 5, 5);
+    font-weight: 300;
+    border-radius: 25px;
+    font-size: 1em;
+    box-shadow: -5px -5px 15px rgba(252, 2, 2, 0.236),
+    5px 5px 15px  rgba(14, 1, 1, 0.555);
+    outline: none;
+}
+#container .form #inputbux #divspan i {
+    position: absolute;
+top: 15px;
+left: 16px;
+width: 25px;
+padding-right: 8px;
+padding: 2px 0;
+color: rgb(255, 0, 0);
+border-right: 1px solid rgb(255, 0, 0);
+transform: translateY(-6px);
+}
+#container .form #inputbux #divspan #ss{
+    transform: translateY(-1px);
+}
+
+#container .form.signin #inputbux #divsginin span {
+    position: absolute;
+    left: 0;
+    padding: 12px 10px 12px 48px;
+    pointer-events: none;
+    font-size: 1em;
+    font-weight:300 ;
+    letter-spacing: 0.07em;
+    color: rgb(255, 0, 0);
+}
+#container .form.signin #inputbux #divsginin #error{
+    padding: 8px 6px 8px 48px;
+    border: none;
+    width: 100%;
+    background: rgba(34, 4, 14, 0.654);
+    border: 1px solid  rgba(255,255, 255, 0.1);
+    color: rgb(52, 5, 5);
+    font-weight: 300;
+    border-radius: 25px;
+    font-size: 1em;
+    box-shadow: -5px -5px 15px rgba(252, 2, 2, 0.236),
+    5px 5px 15px  rgba(14, 1, 1, 0.555);
+    outline: none;
+}
+#container .form.signin #inputbux #divsginin i {
+    position: absolute;
+top: 15px;
+left: 16px;
+width: 25px;
+padding-right: 8px;
+padding: 2px 0;
+color: rgb(255, 0, 0);
+border-right: 1px solid rgb(255, 0, 0);
+transform: translateY(-6px);
+}
+#container .form.signin #inputbux #divsginin #ss{
+    transform: translateY(-1px);
+}
+
+
+#container .form.signin .formlink a {
+    color: rgb(255, 255, 255) ;
+    
+    font-weight: 500;
+}
+#container .form.signin #inputbux #toggle i.eyelink {
+   
+    color: rgb(0, 94, 255);
+    border: none;
+    cursor: pointer;
+    transform: translateY(-7px);
+     transform: translateX(250px);
+}
+#container .form.signin #inputbux #toggle i.eyelink:hover {
+    font-size: 1.2em;
+    transform: translateY(-2px);
+     transform: translateX(245px);
+}
+#container .form.signin #inputbux #toggle i.eyeshow{
+    display: none;
+    color: rgb(0, 94, 255);
+    border: none;
+    cursor: pointer;
+    transform: translateY(-7px);
+     transform: translateX(250px);
+}
+#container .form.signin #inputbux #toggle i.eyeshow:hover{
+    display: none;
+    font-size: 1.2em;
+    transform: translateY(-2px);
+     transform: translateX(245px);
+}
+
+#container .form.signin #inputbux #togglex i.eyelinkx {
+   
+    color: rgb(0, 94, 255);
+    border: none;
+    cursor: pointer;
+    transform: translateY(-7px);
+     transform: translateX(250px);
+}
+#container .form.signin #inputbux #togglex i.eyelinkx:hover {
+    font-size: 1.2em;
+    transform: translateY(-2px);
+     transform: translateX(245px);
+}
+#container .form.signin #inputbux #togglex i.eyeshowx{
+    display: none;
+    color: rgb(0, 94, 255);
+    border: none;
+    cursor: pointer;
+    transform: translateY(-7px);
+     transform: translateX(250px);
+}
+#container .form.signin #inputbux #togglex i.eyeshowx:hover{
+    display: none;
+    font-size: 1.2em;
+    transform: translateY(-2px);
+     transform: translateX(245px);
+}
+
+#container .form.signin .line{
+    position: relative;
+height: 1px;
+width: 100%;
+background-color: rgb(0, 255, 251);
+transform: translateY(-5px);
+}
+
+#container .form.signin .media {
+    padding: 8px 10px 12px 30px;
+    border: none;
+    width: 100%;
+    background: rgb(29, 67, 191);
+    border: 1px solid  rgba(255,255, 255, 0.1);
+    color: aliceblue;
+    border-radius: 25px;
+    box-shadow: -5px -5px 15px rgba(15, 185, 247, 0.464),
+    5px 5px 15px  rgba(0,0, 0, 0.35);
+    transform: translateY(-10px);
+}
+#container .form.signin .media .field{
+    font-size: 1em;
+letter-spacing: 0.11em;
+color: aliceblue;
+
+}
+#container .form.signin .media i{
+ font-size: 1.5em;
+ color: aliceblue;
+ transform: translateX(-17px );
+}
